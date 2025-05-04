@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { useInterval } from "react-use";
-import { useSearchParams } from "react-router";
 
 import { exampleText } from "../text";
+import { InputsState } from "./InputsForm";
 
-export function Go() {
-	const [searchParams] = useSearchParams();
+export interface ScrollingDisplayProps {
+	inputs: InputsState;
+}
 
-	const fontSize = String(searchParams.get("fontSize"));
-	const fontWidth = Number(searchParams.get("fontWidth"));
-	const wordsPerMinute = Number(searchParams.get("wordsPerMinute"));
-
+export function ScrollingDisplay({ inputs }: ScrollingDisplayProps) {
 	const characters = exampleText.split("");
 
 	const [startIndex, setStartIndex] = useState(0);
-	const tickFrequency = Math.round(6_000 / wordsPerMinute);
+	const tickFrequency = Math.round(6_000 / inputs.wordsPerMinute);
 
 	useInterval(() => {
 		setStartIndex(startIndex + 1);
@@ -23,8 +21,8 @@ export function Go() {
 	return (
 		<div
 			style={{
-				fontSize: `${fontSize}px`,
-				letterSpacing: `${fontWidth / 10}px`,
+				fontSize: `${inputs.fontSize}px`,
+				letterSpacing: `${inputs.fontWidth / 10}px`,
 			}}
 		>
 			{characters.map((character, index) => {
@@ -33,11 +31,11 @@ export function Go() {
 
 				return (
 					<span
-						style={{
-							transition: `opacity ${tickFrequency * 5}ms`,
-							opacity: opacity,
-						}}
 						key={index}
+						style={{
+							opacity,
+							transition: `opacity ${tickFrequency * 2}ms`,
+						}}
 					>
 						{character}
 					</span>

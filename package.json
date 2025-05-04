@@ -63,7 +63,6 @@
 		"prettier-plugin-sh": "0.15.0",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
-		"react-router": "^7.5.3",
 		"react-use": "^17.6.0",
 		"sentences-per-line": "0.3.0",
 		"typescript": "5.8.2",

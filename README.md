@@ -18,14 +18,10 @@
 
 ## Usage
 
+View the `index.html`.
+
 ```shell
-npm i scrolling-text-reader
-```
-
-```ts
-import { greet } from "scrolling-text-reader";
-
-greet("Hello, world! 💖");
+pnpm dev
 ```
 
 ## Development

@@ -1,5 +1,6 @@
 {
 	"$schema": "https://unpkg.com/knip@5.46.0/schema.json",
+	"ignoreDependencies": ["@types/css-modules"],
 	"ignoreExportsUsedInFile": { "interface": true, "type": true },
 	"project": ["src/**/*.{ts,tsx}"]
 }

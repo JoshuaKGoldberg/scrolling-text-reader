@@ -14,6 +14,7 @@ export function StoryInput({ setValue, value }: StoryInputProps) {
 	return (
 		<div className={styles.storyInput}>
 			<textarea
+				aria-label="Displayed Text"
 				className={styles.textarea}
 				onChange={(event) => {
 					setValue(event.target.value);
@@ -21,6 +22,7 @@ export function StoryInput({ setValue, value }: StoryInputProps) {
 				value={value}
 			/>
 			<select
+				aria-label="Preset Story"
 				className={styles.select}
 				onChange={(event) => {
 					const story = exampleStories.get(event.target.value);

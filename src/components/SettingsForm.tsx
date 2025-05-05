@@ -3,6 +3,7 @@ import { useLocalStorage } from "react-use";
 import { defaultSettings, Settings } from "../data/settings.ts";
 import { Button } from "./Button";
 import { NumberInput } from "./NumberInput";
+import { SelectInput } from "./SelectInput.tsx";
 import styles from "./SettingsForm.module.css";
 import { StoryInput } from "./StoryInput";
 
@@ -46,6 +47,13 @@ export function SettingsForm({
 				name="fontSize"
 				setValue={createSetState("fontSize")}
 				value={fullLocalState.fontSize}
+			/>
+			<SelectInput
+				label="Font Weight"
+				name="fontWeight"
+				options={["bold", "bolder", "normal"]}
+				setValue={createSetState("fontWeight")}
+				value={fullLocalState.fontWeight}
 			/>
 			<NumberInput
 				label="Font Width"

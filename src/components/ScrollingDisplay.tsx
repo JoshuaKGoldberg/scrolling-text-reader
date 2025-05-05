@@ -27,6 +27,7 @@ export function ScrollingDisplay({ settings }: ScrollingDisplayProps) {
 		<div
 			style={{
 				fontSize: `${settings.fontSize}px`,
+				fontWeight: "bold",
 				letterSpacing: `${settings.fontWidth / 10}px`,
 			}}
 		>

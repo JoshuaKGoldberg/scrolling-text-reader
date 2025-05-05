@@ -1,3 +1,4 @@
-.numberInput {
+.selectInput {
 	font-size: var(--fontSizeLarge);
+	width: 100%;
 }

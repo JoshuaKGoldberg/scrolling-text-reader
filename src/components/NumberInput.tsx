@@ -1,3 +1,4 @@
+import { Labeled } from "./Labeled";
 import styles from "./NumberInput.module.css";
 
 export interface NumberInputProps {
@@ -14,17 +15,17 @@ export function NumberInput({
 	value,
 }: NumberInputProps) {
 	return (
-		<div className={styles.numberInput}>
-			<label htmlFor={name}>{label}:</label>
+		<Labeled label={label} name={name}>
 			<input
+				className={styles.numberInput}
 				id={name}
 				name={name}
 				onChange={(event) => {
 					setValue(+event.target.value);
 				}}
-				type={"number"}
+				type="number"
 				value={value}
 			/>
-		</div>
+		</Labeled>
 	);
 }

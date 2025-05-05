@@ -1,0 +1,11 @@
+.labeled {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-width: calc(50% - (var(--inputs-gap) / 2));
+	width: 100%;
+}
+
+.label {
+	font-size: var(--fontSizeMedium);
+}

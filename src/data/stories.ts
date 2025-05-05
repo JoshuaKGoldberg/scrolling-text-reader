@@ -1,6 +1,7 @@
 /* cspell:disable */
 
 export const exampleStories = new Map([
+	["(blank)", ""],
 	["One Sentence", "Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
 	[
 		"What is Lorem Ipsum?",

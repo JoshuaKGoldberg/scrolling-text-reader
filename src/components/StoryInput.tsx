@@ -6,7 +6,11 @@ export interface StoryInputProps {
 	value: string;
 }
 
-export function StoryInput({ setValue, value: text }: StoryInputProps) {
+export function StoryInput({ setValue, value }: StoryInputProps) {
+	const storyEntries = Array.from(exampleStories);
+	const selectedStory =
+		storyEntries.find(([, story]) => story === value)?.[0] ?? "";
+
 	return (
 		<div className={styles.storyInput}>
 			<textarea
@@ -14,23 +18,27 @@ export function StoryInput({ setValue, value: text }: StoryInputProps) {
 				onChange={(event) => {
 					setValue(event.target.value);
 				}}
-				value={text}
+				value={value}
 			/>
 			<select
 				className={styles.select}
 				onChange={(event) => {
 					const story = exampleStories.get(event.target.value);
-					console.log("Story selected:", event.target.value);
 
-					if (!story) {
+					if (story === undefined) {
 						console.error("Story not found:", event.target.value);
 					} else {
 						setValue(story);
 					}
 				}}
+				value={selectedStory}
 			>
-				<option disabled>Select a story...</option>
-				{Array.from(exampleStories.keys()).map((name) => (
+				{!selectedStory && (
+					<option disabled value="">
+						(custom story)
+					</option>
+				)}
+				{storyEntries.map(([name]) => (
 					<option key={name} value={name}>
 						{name}
 					</option>

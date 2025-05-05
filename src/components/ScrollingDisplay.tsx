@@ -1,33 +1,43 @@
 import { useState } from "react";
 import { useInterval } from "react-use";
 
-import { exampleText } from "../text";
-import { InputsState } from "./InputsForm";
+import { Settings } from "../data/settings.ts";
 
 export interface ScrollingDisplayProps {
-	inputs: InputsState;
+	settings: Settings;
 }
 
-export function ScrollingDisplay({ inputs }: ScrollingDisplayProps) {
-	const characters = exampleText.split("");
+export function ScrollingDisplay({ settings }: ScrollingDisplayProps) {
+	const characters = settings.text.split("");
 
-	const [startIndex, setStartIndex] = useState(0);
-	const tickFrequency = Math.round(6_000 / inputs.wordsPerMinute);
+	const [currentIndex, setCurrentIndex] = useState(
+		-settings.visibleCharacters - 1,
+	);
+	const tickFrequency = Math.round(6_000 / settings.wordsPerMinute);
 
 	useInterval(() => {
-		setStartIndex(startIndex + 1);
+		if (currentIndex > characters.length + settings.visibleCharacters) {
+			setCurrentIndex(-settings.visibleCharacters);
+		} else {
+			setCurrentIndex(currentIndex + 1);
+		}
 	}, tickFrequency);
 
 	return (
 		<div
 			style={{
-				fontSize: `${inputs.fontSize}px`,
-				letterSpacing: `${inputs.fontWidth / 10}px`,
+				fontSize: `${settings.fontSize}px`,
+				letterSpacing: `${settings.fontWidth / 10}px`,
 			}}
 		>
 			{characters.map((character, index) => {
-				const delta = Math.abs(index - startIndex);
-				const opacity = delta > 10 ? 0 : delta < 10 ? 1 : 1 / delta;
+				const delta = Math.abs(index - currentIndex);
+				const opacity =
+					delta > settings.visibleCharacters
+						? 0
+						: delta < settings.visibleCharacters
+							? 1
+							: 1 / delta;
 
 				return (
 					<span

@@ -1,0 +1,13 @@
+.app {
+	--fontSizeSmall: clamp(1.25rem, 1.5vh, 1.5rem);
+	--fontSizeMedium: clamp(1.5rem, 2vh, 2rem);
+	--fontSizeLarge: clamp(2.5rem, 3vh, 3rem);
+
+	--spacingSmall: clamp(0.75rem, 1.5vw, 2rem);
+	--spacingMedium: clamp(1rem, 2vw, 3.5rem);
+	padding: var(--spacingSmall) var(--spacingMedium);
+}
+
+.app * {
+	box-sizing: border-box;
+}

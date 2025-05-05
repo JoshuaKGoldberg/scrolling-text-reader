@@ -1,14 +1,20 @@
 import { useState } from "react";
 
-import { InputsForm, InputsState } from "./components/InputsForm";
+import styles from "./App.module.css";
 import { ScrollingDisplay } from "./components/ScrollingDisplay";
+import { SettingsForm } from "./components/SettingsForm";
+import { Settings } from "./data/settings";
 
 export function App() {
-	const [inputs, setInputs] = useState<InputsState>();
+	const [settings, setSettings] = useState<Settings>();
 
-	return inputs ? (
-		<ScrollingDisplay inputs={inputs} />
-	) : (
-		<InputsForm setInputsState={setInputs} />
+	return (
+		<div className={styles.app}>
+			{settings ? (
+				<ScrollingDisplay settings={settings} />
+			) : (
+				<SettingsForm setSettings={setSettings} />
+			)}
+		</div>
 	);
 }

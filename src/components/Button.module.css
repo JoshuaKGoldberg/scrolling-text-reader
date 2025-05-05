@@ -1,0 +1,17 @@
+.button {
+	border-width: 1px;
+	cursor: pointer;
+	font-size: 2rem;
+	padding: 1.5rem 2rem;
+}
+
+.bold {
+	border-width: 2px;
+	font-weight: bold;
+}
+
+.disabled {
+	cursor: not-allowed;
+	font-style: italic;
+	opacity: 0.9;
+}

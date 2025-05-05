@@ -1,3 +1,5 @@
+import styles from "./NumberInput.module.css";
+
 export interface NumberInputProps {
 	label: string;
 	name: string;
@@ -12,7 +14,7 @@ export function NumberInput({
 	value,
 }: NumberInputProps) {
 	return (
-		<div>
+		<div className={styles.numberInput}>
 			<label htmlFor={name}>{label}:</label>
 			<input
 				id={name}

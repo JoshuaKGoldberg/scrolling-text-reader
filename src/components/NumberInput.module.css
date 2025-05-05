@@ -1,0 +1,14 @@
+.numberInput {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-width: calc(50% - (var(--inputs-gap) / 2));
+}
+
+.numberInput label {
+	font-size: var(--fontSizeMedium);
+}
+
+.numberInput input {
+	font-size: var(--fontSizeLarge);
+}

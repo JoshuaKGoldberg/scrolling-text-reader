@@ -1,0 +1,18 @@
+.storyInput {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 0.5rem;
+}
+
+.textarea {
+	font-family: inherit;
+	font-size: var(--fontSizeSmall);
+	padding: clamp(0.25rem, 1vw, 0.75rem) clamp(0.35rem, 1.25vw, 1rem);
+	height: clamp(10rem, 20vh, 30rem);
+	width: 100%;
+}
+
+.select {
+	font-size: var(--fontSizeSmall);
+}

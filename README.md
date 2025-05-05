@@ -18,11 +18,8 @@
 
 ## Usage
 
-View the `index.html`.
-
-```shell
-pnpm dev
-```
+This app is intended for neurology patients who need a dynamic scrolling view of text.
+The constantly scrolling view of text helps train eyes to move left to right.
 
 ## Development
 

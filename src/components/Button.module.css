@@ -2,7 +2,7 @@
 	border-width: 1px;
 	cursor: pointer;
 	font-size: 2rem;
-	padding: 1.5rem 2rem;
+	padding: var(--spacingSmallY) 2rem;
 }
 
 .bold {

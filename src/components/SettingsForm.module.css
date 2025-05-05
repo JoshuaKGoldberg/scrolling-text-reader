@@ -1,10 +1,9 @@
 .settingsForm {
-	--inputs-gap: clamp(2rem, 3.5vh, 5rem);
+	--inputs-gap-x: clamp(1rem, 2vw, 5rem);
+	--inputs-gap-y: clamp(0.5rem, 2.5vh, 5rem);
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--inputs-gap);
-	margin: auto;
-	max-width: 35rem;
+	gap: var(--inputs-gap-y) var(--inputs-gap-x);
 }
 
 .buttons {

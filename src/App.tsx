@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import styles from "./App.module.css";
 import { ScrollingDisplay } from "./components/ScrollingDisplay";
-import { SettingsForm } from "./components/SettingsForm";
+import { StartPage } from "./components/StartPage";
 import { Settings } from "./data/settings";
 
 export function App() {
@@ -13,7 +13,7 @@ export function App() {
 			{settings ? (
 				<ScrollingDisplay settings={settings} />
 			) : (
-				<SettingsForm setSettings={setSettings} />
+				<StartPage setSettings={setSettings} />
 			)}
 		</div>
 	);

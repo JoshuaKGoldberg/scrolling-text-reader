@@ -1,0 +1,29 @@
+.startPage {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.5rem, 3.5vh, 7.5rem);
+	max-width: 35rem;
+}
+
+.title {
+	align-items: center;
+	display: flex;
+	font-size: var(--fontSizeMedium);
+	gap: 0.5rem;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.link {
+	display: contents;
+	width: 2rem;
+	height: 2rem;
+}
+
+.logo {
+	width: 2rem;
+	height: 2rem;
+}

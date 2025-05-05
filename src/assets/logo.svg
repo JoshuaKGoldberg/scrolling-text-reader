@@ -1,0 +1,18 @@
+<svg
+	width="700"
+	height="700"
+	viewBox="0 0 700 700"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<rect width="700" height="700" rx="50" fill="white" />
+	<path
+		d="M349 161C161 161 39 348 39 348C39 348 172.716 544 349 544C519 544 662 348 662 348C662 348 537 161 349 161Z"
+		stroke="#005698"
+		stroke-width="70"
+		stroke-linejoin="round"
+	/>
+	<rect x="225" y="290" width="50" height="120" fill="#00AAFF" />
+	<rect x="425" y="290" width="50" height="120" fill="#00AAFF" />
+	<rect x="320" y="260" width="60" height="180" fill="#00AAFF" />
+</svg>

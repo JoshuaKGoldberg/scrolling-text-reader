@@ -44,7 +44,7 @@
 		"@vitejs/plugin-react": "4.4.1",
 		"clsx": "2.1.1",
 		"cspell": "8.19.3",
-		"eslint": "9.25.1",
+		"eslint": "9.26.0",
 		"eslint-plugin-jsdoc": "50.6.8",
 		"eslint-plugin-jsonc": "2.20.0",
 		"eslint-plugin-markdown": "5.1.0",

@@ -99,8 +99,8 @@ importers:
         specifier: 17.6.0
         version: 17.6.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       sentences-per-line:
-        specifier: 0.3.0
-        version: 0.3.0
+        specifier: 0.4.0
+        version: 0.4.0
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -1791,10 +1791,6 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  markdownlint-rule-helpers@0.28.0:
-    resolution: {integrity: sha512-qBOQWESmc/yTNe6nVu3D7AU7pFg2e7T5svbQI+S7rocw4g4xZ3GHerKPl0Rw0cx4fnAViEdzoAcbrxeuXUCEAA==}
-    engines: {node: '>=18'}
-
   markdownlint@0.39.0:
     resolution: {integrity: sha512-Xt/oY7bAiHwukL1iru2np5LIkhwD19Y7frlsiDILK62v3jucXCD6JXlZlwMG12HZOR+roHIVuJZrfCkOhp6k3g==}
     engines: {node: '>=20'}
@@ -2155,9 +2151,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  sentences-per-line@0.3.0:
-    resolution: {integrity: sha512-/cSQgaLDEmed+AIC2KAd1A5k4sy8bbWy3ObBDUE2+JmiwolTBuc87TlwlTSnBJVPa7+zfGv28J63xzznFRv5tQ==}
-    engines: {node: '>=18'}
+  sentences-per-line@0.4.0:
+    resolution: {integrity: sha512-KHlNwB0prYEmhs6yxPPrZZmq0O+tauB04lMY7vTirbFHSwaZmffsShCRH4dNThbhVQ1kVfpD+Omb8EOzKv7XcQ==}
+    engines: {node: '>=22.14.0'}
 
   set-harmonic-interval@1.0.1:
     resolution: {integrity: sha512-AhICkFV84tBP1aWqPwLZqFvAwqEoVA9kxNMniGEUvzOlm4vLmOFLiTT3UZ6bziJTy4bOVpzWGTfSCbmaayGx8g==}
@@ -4129,8 +4125,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  markdownlint-rule-helpers@0.28.0: {}
-
   markdownlint@0.39.0:
     dependencies:
       micromark: 4.0.2
@@ -4632,9 +4626,7 @@ snapshots:
 
   semver@7.7.3: {}
 
-  sentences-per-line@0.3.0:
-    dependencies:
-      markdownlint-rule-helpers: 0.28.0
+  sentences-per-line@0.4.0: {}
 
   set-harmonic-interval@1.0.1: {}
 

@@ -67,7 +67,7 @@
 		"react-use": "17.6.0",
 		"sentences-per-line": "0.3.0",
 		"typescript": "5.9.2",
-		"typescript-eslint": "8.41.0",
+		"typescript-eslint": "8.56.1",
 		"vite": "7.3.0"
 	},
 	"packageManager": "pnpm@10.30.0",

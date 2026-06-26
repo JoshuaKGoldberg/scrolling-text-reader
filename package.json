@@ -68,7 +68,7 @@
 		"sentences-per-line": "0.3.0",
 		"typescript": "5.9.2",
 		"typescript-eslint": "8.41.0",
-		"vite": "8.0.0"
+		"vite": "8.1.0"
 	},
 	"packageManager": "pnpm@11.8.0",
 	"engines": {
